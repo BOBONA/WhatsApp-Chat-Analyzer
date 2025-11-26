@@ -1,0 +1,17 @@
+.text-format {
+    white-space: pre-wrap;
+}
+
+#raw {
+    display: none;
+}
+
+table {
+    width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}

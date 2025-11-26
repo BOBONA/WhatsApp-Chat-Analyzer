@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>WhatsApp Chat Analyzer</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/whatsapp-chat-parser/dist/whatsapp-chat-parser.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+        <script src="chatanalyzer.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>WhatsApp Chat Analyzer</h1>
+        <h3>Supply a chat log:</h3>
+        <input type="file" id="logInput" accept=".html,text/plain" multiple>
+        <button onclick="buttonPressed()" type="button">Process</button>
+        <br>
+        Last <input type="text" id="months" value="12"> months
+        <br>
+        <button onclick="copyToClipboard()" style="display: none;" id="copy" type="button">Copy raw JSON to clipboard</button>
+        <button style="display: none;" id="chatExport" type="button">Export chat log CSV</button>
+        <p id="raw" class="text-format"></p>
+        <div id="output"></div>
+    </body>
+</html>
